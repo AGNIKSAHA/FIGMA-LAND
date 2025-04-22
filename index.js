@@ -50,3 +50,19 @@ const videoContainer = document.querySelector('.video-container');
       card.classList.add('card_active');
     });
   });
+
+  const form = document.getElementById('contactForm');
+    const modal = document.getElementById('successModal');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // prevent actual form submission
+      if (form.checkValidity()) {
+        modal.style.display = 'block';
+        form.reset(); 
+      }
+    });
+
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+

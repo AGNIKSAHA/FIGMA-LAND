@@ -303,13 +303,19 @@
         </p>
       </div>
       <div class="contact">
-        <form action="">
+        <form action="" id="contactForm">
           <h3>Content us</h3>
-          <input type="text" placeholder="   Your Name" class="contact_input">
-          <input type="email" placeholder="   Your Email" class="contact_input">
-          <textarea name=""  placeholder="Your Message"id=""></textarea>
-          <button type="button" class="btn-1">Send</button>
+          <input type="text" placeholder="   Your Name" class="contact_input" required>
+          <input type="email" placeholder="   Your Email" class="contact_input" required>
+          <textarea name=""  placeholder="Your Message"id="" required></textarea>
+          <button type="submit" class="btn-1">Send</button>
         </form>
+        <div id="successModal" class="modal">
+          <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">×</button>
+            <p>Your query sent successfully</p>
+          </div>
+        </div>
 
         <div class="container-1">
           <div class="container-2">
